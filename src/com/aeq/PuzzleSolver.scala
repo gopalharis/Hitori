@@ -56,19 +56,26 @@ object PuzzleSolver {
     def getBox(x: Int, y: Int): Box = boxes(x)(y)
 
 
+    /**
+      * Updates the given cell with dessiredColor and
+      * When Color is white marks all other cells with same value in the row/colum to be Black
+      * When Color is Black marks all it's adjacent to be White
+      * @param cell
+      * @param desiredColor
+      * @return
+      */
     def changeColorAndUpdateBoard(cell: Box, desiredColor: Color.Value): Board = {
-      val line = boxes(cell.rowIndex)
-      val box = line(cell.columnIndex)
+
+      def updateColor(color: Color) : Board = {
+        val line = boxes(cell.rowIndex)
+        val box = line(cell.columnIndex)
+        Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(color))))
+      }
+
       if(desiredColor==Black && !isBlackConnected(board = this, cell.rowIndex, cell.columnIndex)) {
-        val b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(desiredColor))))
-        markBlackAdjacentAsWhite(b, cell.rowIndex, cell.columnIndex)
+        markBlackAdjacentAsWhite(updateColor(desiredColor), cell.rowIndex, cell.columnIndex)
       } else {
-        var b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(White))))
-
-        val otherCells = b.getOtherRowCells(cell).filter(_.value==cell.value) ++ b.getOtherColumnCells(cell).filter(_.value==cell.value)
-        otherCells.foreach (c => b = changeColorAndUpdateBoard(c, Black))
-
-        b
+        markSameValuesAsBlack(updateColor(desiredColor), cell)
       }
 
     }
@@ -88,18 +95,10 @@ object PuzzleSolver {
     board
   }
 
-  def markSameValuesAsBlack(board:Board, x:Int, y:Int) :Board = {
+  def markSameValuesAsBlack(board:Board, cell:Box) :Board = {
     var b = board
-
-    val currentBox = b.getBox(x, y)
-    val re = b.getOtherRowCells(currentBox).filter(_.value==currentBox.value)
-    val ce =   b.getBoxes.flatten.filter(cell => cell.rowIndex!= x &&  cell.color==Undefined && cell.columnIndex == y && cell.value==currentBox.value)
-    if((re++ce).nonEmpty) (re++ce).foreach {
-      cell => {
-        b = b.changeColorAndUpdateBoard(cell, Black)
-      }
-    }
-
+    val otherCells = b.getOtherRowCells(cell).filter(_.value==cell.value) ++ b.getOtherColumnCells(cell).filter(_.value==cell.value)
+    otherCells.foreach (c => b = b.changeColorAndUpdateBoard(c, Black))
     b
   }
 
