@@ -84,12 +84,7 @@ object PuzzleSolver {
 
         val re = b.getBoxes(cell.rowIndex).filter(c => c.columnIndex != cell.columnIndex && c.color==Undefined && c.value==cell.value)
         val ce =   b.getBoxes.flatten.filter(c => c.rowIndex != cell.rowIndex &&  c.color==Undefined && c.columnIndex == cell.columnIndex && c.value==cell.value)
-        if((re++ce).nonEmpty) (re++ce).foreach {
-
-          cell => {
-            b = changeColorAndUpdateBoard(cell, Black)
-          }
-        }
+        if((re++ce).nonEmpty) (re++ce).foreach (c => b = changeColorAndUpdateBoard(c, Black))
 
         b
       }
