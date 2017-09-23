@@ -25,12 +25,8 @@ object PuzzleSolver {
 
     def getBoxes: List[List[Box]] = boxes
 
-    /**
-      * Returns adjacent cells both from Row and Column of current cell
-      * @param rowIndex
-      * @param columnIndex
-      * @return
-      */
+
+    //Returns adjacent cells both from Row and Column of current cell
     def getNeighbors(rowIndex: Int, columnIndex: Int): List[Box] = {
       val neighborCoords = List((rowIndex + 1, columnIndex), (rowIndex - 1, columnIndex), (rowIndex, columnIndex - 1), (rowIndex, columnIndex + 1))
       neighborCoords.foldLeft(List[Box]())((currList, currCoords) => {
@@ -41,10 +37,7 @@ object PuzzleSolver {
       })
     }
 
-    /**
-      * @param updatedCell
-      * @return All undefined cells in the current row of a given cell
-      */
+    //Get All undefined cells in the current row of a given cell
     def getOtherRowCells(updatedCell: Box) = {
       getBoxes(updatedCell.rowIndex).filter(c => c.columnIndex != updatedCell.columnIndex && c.color==Undefined)
     }
@@ -79,6 +72,21 @@ object PuzzleSolver {
       }
 
     }
+
+    def markUniqueCellsWhite(): Board = {
+
+      getBoxes.flatten.filter(_.color==Undefined).foreach { currentCell =>
+        val noRowDuplicate = !getBoxes.flatten.filter(rowCell => rowCell.rowIndex==currentCell.rowIndex && rowCell.columnIndex != currentCell.columnIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
+        val noColumnDuplicate = !getBoxes.flatten.filter(rowCell => rowCell.columnIndex==currentCell.columnIndex && rowCell.rowIndex != currentCell.rowIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
+        if(noRowDuplicate && noColumnDuplicate)
+          changeColorAndUpdateBoard(currentCell, White)
+      }
+      if(getBoxes.flatten.exists(_.color == Undefined))
+        markUniqueCellsWhite()
+      else
+        this
+    }
+
   }
 
 
@@ -202,7 +210,7 @@ object PuzzleSolver {
     board = checkWhiteConnectedness(board)
     println("White Connected")
     showBoard(board)
-    board = markWhite(board)
+    board = board.markUniqueCellsWhite()
     println("Mark relevant white")
     showBoard(board)
 
@@ -232,23 +240,6 @@ object PuzzleSolver {
       val line = loadLine(boardData.head).reverse
       loadBoard(boardData.tail, x + 1, Board(line :: currBoard.getBoxes))
     }
-  }
-
-
-  def markWhite(b: Board): Board = {
-    var board = b
-    board.getBoxes.flatten.filter(_.color==Undefined).foreach { currentCell =>
-      val noRowDuplicate = !board.getBoxes.flatten.filter(rowCell => rowCell.rowIndex==currentCell.rowIndex && rowCell.columnIndex != currentCell.columnIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
-      val noColumnDuplicate = !board.getBoxes.flatten.filter(rowCell => rowCell.columnIndex==currentCell.columnIndex && rowCell.rowIndex != currentCell.rowIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
-      if(noRowDuplicate && noColumnDuplicate)
-        board.changeColorAndUpdateBoard(currentCell, White)
-
-    }
-    println("--------------")
-    showBoard(board)
-    if(board.getBoxes.flatten.exists(_.color == Undefined)) board = markWhite(board)
-
-    board
   }
 
 
