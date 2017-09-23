@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03aa853-2778-403e-b89a-5f9d8261e6b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board$.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Box$.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Box.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Color$.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eout.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hitori.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$.class" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board.class" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver.class" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala" afterPath="$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,88 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PuzzleSolver.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PuzzleSolver.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1506153240000" expanded="true" signature="35137:35204" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35137:35222" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35137:35235" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35137:35250" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35285:37449" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35298:37434" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35352:35647" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35371:35632" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35434:35612" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35474:35578" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35495:35556" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35697:36024" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35716:36009" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35811:35989" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35851:35955" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="35872:35933" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36075:36394" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36094:36379" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36181:36359" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36221:36325" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36242:36303" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36437:36743" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36456:36728" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36530:36708" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36570:36674" ph="..." />
-                <marker date="1506153240000" expanded="true" signature="36591:36652" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eout.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/eout.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="171">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,9 +35,13 @@
       <find>W</find>
       <find>List</find>
       <find>White</find>
+      <find>yNumber</find>
+      <find>changeColorAndUpdateBoard(cell.rowIndex, cell.columnIndex</find>
     </findStrings>
     <replaceStrings>
       <replace>y</replace>
+      <replace>cell.columnIndex</replace>
+      <replace>changeColorAndUpdateBoard(cell</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -361,10 +277,19 @@
       <option name="presentableId" value="Default" />
       <updated>1505842244667</updated>
     </task>
+    <task id="LOCAL-00001" summary="First draft of working copy">
+      <created>1506153677374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506153677374</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="757" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -374,7 +299,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5518248" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5518248" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -397,19 +322,29 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First draft of working copy" />
+    <option name="LAST_COMMIT_MESSAGE" value="First draft of working copy" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala</url>
-          <line>270</line>
+          <line>287</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -504,14 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -525,32 +452,42 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1506153240000" expanded="true" signature="35137:35204" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35137:35222" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35137:35235" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35137:35250" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35285:37449" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35298:37434" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35352:35647" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35371:35632" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35434:35612" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35474:35578" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35495:35556" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35697:36024" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35716:36009" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35811:35989" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35851:35955" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="35872:35933" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36075:36394" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36094:36379" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36181:36359" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36221:36325" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36242:36303" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36437:36743" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36456:36728" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36530:36708" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36570:36674" ph="..." />
-            <marker date="1506153240000" expanded="true" signature="36591:36652" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31334:31351" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31334:31369" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31334:31382" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31334:31397" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31432:33596" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31445:33581" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31499:31794" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31518:31779" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31581:31759" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31621:31725" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31642:31703" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31844:32171" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31863:32156" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31958:32136" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="31998:32102" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32019:32080" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32222:32541" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32241:32526" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32328:32506" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32368:32472" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32389:32450" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32584:32890" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32603:32875" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32677:32855" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32717:32821" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32738:32799" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32941:33250" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="32960:33235" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33037:33215" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33077:33181" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33098:33159" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33302:33567" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33321:33552" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33354:33532" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33394:33498" ph="..." />
+            <marker date="1506167961000" expanded="true" signature="33415:33476" ph="..." />
           </folding>
         </state>
       </provider>
@@ -574,7 +511,15 @@
     <entry file="file://$PROJECT_DIR$/eout.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
