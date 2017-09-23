@@ -205,8 +205,6 @@ object PuzzleSolver {
     board = checkForSandwiches(board)
     println("Sandwi")
     showBoard(board)
-    board = checkUniqueness(board)
-    println("Unique")
     showBoard(board)
     board = checkCornerHeuristic(board)
     println("Corner")
