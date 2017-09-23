@@ -1,97 +1,88 @@
 package com.aeq
 
 import java.io.File
+import java.io.PrintWriter
+
+object Color extends Enumeration {
+  type Color = Value
+  val White = Value("W")
+  val Black = Value("B")
+  val Undefined = Value("U")
+}
+
+import Color._
+case class Box (rowIndex:Int, columnIndex:Int, value: Int, color: Color.Value=Undefined) {
+  def changeValue(desiredColor: Color.Value): Box = Box(rowIndex, columnIndex, value, desiredColor)
+}
+
+case class Board(boxes: List[List[Box]]) {
+
+  val height: Int = boxes.length
+  val width: Int = if (boxes.nonEmpty) boxes.head.length else 0
+
+  def getBoxes: List[List[Box]] = boxes
 
 
-object PuzzleSolver {
-
-  object Color extends Enumeration {
-    type Color = Value
-    val White = Value("W")
-    val Black = Value("B")
-    val Undefined = Value("U")
+  //Returns adjacent cells both from Row and Column of current cell
+  def getNeighbors(rowIndex: Int, columnIndex: Int): List[Box] = {
+    val neighborCoords = List((rowIndex + 1, columnIndex), (rowIndex - 1, columnIndex), (rowIndex, columnIndex - 1), (rowIndex, columnIndex + 1))
+    neighborCoords.foldLeft(List[Box]())((currList, currCoords) => {
+      if (!(currCoords._1 >= height || currCoords._1 < 0 || currCoords._2 < 0 || currCoords._2 >= width)) {
+        getBox(currCoords._1, currCoords._2) :: currList
+      }
+      else currList
+    })
   }
 
-  import Color._
-
-  case class Box (rowIndex:Int, columnIndex:Int, value: Int, color: Color.Value=Undefined) {
-    def changeValue(desiredColor: Color.Value): Box = Box(rowIndex, columnIndex, value, desiredColor)
+  //Get All undefined cells in the current row of a given cell
+  def getOtherRowCells(updatedCell: Box) = {
+    getBoxes(updatedCell.rowIndex).filter(c => c.columnIndex != updatedCell.columnIndex && c.color==Undefined)
   }
 
-  case class Board(boxes: List[List[Box]]) {
+  def getOtherColumnCells(upatedCell: Box) = {
+    getBoxes.flatten.filter(c => c.rowIndex != upatedCell.rowIndex && c.columnIndex == upatedCell.columnIndex  &&  c.color==Undefined)
+  }
 
-    val height: Int = boxes.length
-    val width: Int = if (boxes.nonEmpty) boxes.head.length else 0
-
-    def getBoxes: List[List[Box]] = boxes
+  def getBox(x: Int, y: Int): Box = boxes(x)(y)
 
 
-    //Returns adjacent cells both from Row and Column of current cell
-    def getNeighbors(rowIndex: Int, columnIndex: Int): List[Box] = {
-      val neighborCoords = List((rowIndex + 1, columnIndex), (rowIndex - 1, columnIndex), (rowIndex, columnIndex - 1), (rowIndex, columnIndex + 1))
-      neighborCoords.foldLeft(List[Box]())((currList, currCoords) => {
-        if (!(currCoords._1 >= height || currCoords._1 < 0 || currCoords._2 < 0 || currCoords._2 >= width)) {
-          getBox(currCoords._1, currCoords._2) :: currList
-        }
-        else currList
-      })
+  /**
+    * Updates the given cell with dessiredColor and
+    * When Color is white marks all other cells with same value in the row/colum to be Black
+    * When Color is Black marks all it's adjacent to be White
+    * @param cell
+    * @param desiredColor
+    * @return
+    */
+  def changeColorAndUpdateBoard(cell: Box, desiredColor: Color.Value): Board = {
+
+    def updateColor(color: Color) : Board = {
+      val line = boxes(cell.rowIndex)
+      val box = line(cell.columnIndex)
+      Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(color))))
     }
 
-    //Get All undefined cells in the current row of a given cell
-    def getOtherRowCells(updatedCell: Box) = {
-      getBoxes(updatedCell.rowIndex).filter(c => c.columnIndex != updatedCell.columnIndex && c.color==Undefined)
-    }
-
-    def getOtherColumnCells(upatedCell: Box) = {
-      getBoxes.flatten.filter(c => c.rowIndex != upatedCell.rowIndex && c.columnIndex == upatedCell.columnIndex  &&  c.color==Undefined)
-    }
-
-    def getBox(x: Int, y: Int): Box = boxes(x)(y)
-
-
-    /**
-      * Updates the given cell with dessiredColor and
-      * When Color is white marks all other cells with same value in the row/colum to be Black
-      * When Color is Black marks all it's adjacent to be White
-      * @param cell
-      * @param desiredColor
-      * @return
-      */
-    def changeColorAndUpdateBoard(cell: Box, desiredColor: Color.Value): Board = {
-
-      def updateColor(color: Color) : Board = {
-        val line = boxes(cell.rowIndex)
-        val box = line(cell.columnIndex)
-        Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(color))))
-      }
-
-      if(desiredColor==Black && !isBlackConnected(board = this, cell.rowIndex, cell.columnIndex)) {
-        markBlackAdjacentAsWhite(updateColor(desiredColor), cell.rowIndex, cell.columnIndex)
-      } else {
-        markSameValuesAsBlack(updateColor(desiredColor), cell)
-      }
-
-    }
-
-    def markUniqueCellsWhite(): Board = {
-
-      getBoxes.flatten.filter(_.color==Undefined).foreach { currentCell =>
-        val noRowDuplicate = !getBoxes.flatten.filter(rowCell => rowCell.rowIndex==currentCell.rowIndex && rowCell.columnIndex != currentCell.columnIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
-        val noColumnDuplicate = !getBoxes.flatten.filter(rowCell => rowCell.columnIndex==currentCell.columnIndex && rowCell.rowIndex != currentCell.rowIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
-        if(noRowDuplicate && noColumnDuplicate)
-          changeColorAndUpdateBoard(currentCell, White)
-      }
-      if(getBoxes.flatten.exists(_.color == Undefined))
-        markUniqueCellsWhite()
-      else
-        this
+    if(desiredColor==Black && !isBlackConnected(board = this, cell.rowIndex, cell.columnIndex)) {
+      markBlackAdjacentAsWhite(updateColor(desiredColor), cell.rowIndex, cell.columnIndex)
+    } else {
+      markSameValuesAsBlack(updateColor(desiredColor), cell)
     }
 
   }
 
+  def markUniqueCellsWhite(): Board = {
 
-
-
+    getBoxes.flatten.filter(_.color==Undefined).foreach { currentCell =>
+      val noRowDuplicate = !getBoxes.flatten.filter(rowCell => rowCell.rowIndex==currentCell.rowIndex && rowCell.columnIndex != currentCell.columnIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
+      val noColumnDuplicate = !getBoxes.flatten.filter(rowCell => rowCell.columnIndex==currentCell.columnIndex && rowCell.rowIndex != currentCell.rowIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
+      if(noRowDuplicate && noColumnDuplicate)
+        changeColorAndUpdateBoard(currentCell, White)
+    }
+    if(getBoxes.flatten.exists(_.color == Undefined))
+      markUniqueCellsWhite()
+    else
+      this
+  }
 
   def isBlackConnected(board: Board,x: Int, y:Int): Boolean = {
     board.getNeighbors(x, y).map(_.color).contains(Black)
@@ -108,6 +99,20 @@ object PuzzleSolver {
     val otherCells = b.getOtherRowCells(cell).filter(_.value==cell.value) ++ b.getOtherColumnCells(cell).filter(_.value==cell.value)
     otherCells.foreach (c => b = b.changeColorAndUpdateBoard(c, Black))
     b
+  }
+
+}
+
+object PuzzleSolver {
+
+
+  def main(args: Array[String]): Unit = {
+    val inputPath = args(0)
+    val output = args(1)
+    println(output)
+
+    val board = solvePuzzle(inputPath)
+    saveOuputToFile(output, board)
   }
 
 
@@ -191,8 +196,34 @@ object PuzzleSolver {
   }
 
 
-  def solvePuzzle(f:String):Unit = {
-    val lines = scala.io.Source.fromFile(new File(f)).getLines().toList
+
+  def showBoard(board:Board) :Unit = {
+    board.getBoxes.foreach(row => {
+      row.foreach(e => print(s"${e.color}\t"))
+      println()
+    } )
+  }
+
+  def loadBoard(boardData: List[List[Int]], x: Int = 0, currBoard: Board = Board(Nil)): Board = {
+
+    def loadLine(lineData: List[Int], y:Int = 0, currLine: List[Box] = Nil): List[Box] = {
+      if (lineData.isEmpty) currLine
+      else {
+        val newLine = Box(x, y, lineData.head) :: currLine
+        loadLine(lineData.tail, y + 1, newLine)
+      }
+    }
+
+    if (boardData.isEmpty) {
+      Board(currBoard.getBoxes.reverse)
+    } else {
+      val line = loadLine(boardData.head).reverse
+      loadBoard(boardData.tail, x + 1, Board(line :: currBoard.getBoxes))
+    }
+  }
+
+  def solvePuzzle(inpputFileName:String): Board = {
+    val lines = scala.io.Source.fromFile(new File(inpputFileName)).getLines().toList
     val numLines = lines.map(_.split(" ").toList.map(_.toInt))
 
     var board =  loadBoard(numLines)
@@ -214,41 +245,25 @@ object PuzzleSolver {
     println("Mark relevant white")
     showBoard(board)
 
+
+    board
+
   }
 
-  def showBoard(board:Board) :Unit = {
+  def saveOuputToFile(ouputFileName:String, board: Board) = {
+    val writer = new PrintWriter(new File(ouputFileName))
     board.getBoxes.foreach(row => {
-      row.foreach(e => print(s"${e.color}\t"))
-      println()
-    } )
-  }
-
-
-  def loadBoard(boardData: List[List[Int]], x: Int = 0, currBoard: Board = Board(Nil)): Board = {
-
-    def loadLine(lineData: List[Int], y:Int = 0, currLine: List[Box] = Nil): List[Box] = {
-      if (lineData.isEmpty) currLine
-      else {
-        val newLine = Box(x, y, lineData.head) :: currLine
-        loadLine(lineData.tail, y + 1, newLine)
+      row.foreach { e =>
+        writer.print(s"${e.color}")
+        if(e.columnIndex<board.width-1) writer.print("\t")   //Avoid Tab for the last element
       }
-    }
-
-    if (boardData.isEmpty) {
-      Board(currBoard.getBoxes.reverse)
-    } else {
-      val line = loadLine(boardData.head).reverse
-      loadBoard(boardData.tail, x + 1, Board(line :: currBoard.getBoxes))
-    }
+      writer.println() //New line for every row
+    } )
+    writer.close()
   }
 
 
-  def main(args: Array[String]): Unit = {
-    val inputPath = args(0)
 
-    solvePuzzle(inputPath)
-
-  }
 
 
 }
