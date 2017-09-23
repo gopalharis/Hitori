@@ -56,26 +56,6 @@ object PuzzleSolver {
     def getBox(x: Int, y: Int): Box = boxes(x)(y)
 
 
-   /* def changeColorAndUpdateBoard(cell: Box, desiredColor: Color.Value): Board = {
-      val line = boxes(cell.rowIndex)
-      val box = line(cell.columnIndex)
-      if(desiredColor==Black && !isBlackConnected(board = this, cell.rowIndex, cell.columnIndex)) {
-        val b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(desiredColor))))
-        markBlackAdjacentAsWhite(b, cell.rowIndex, cell.columnIndex)
-      } else {
-        var b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(White))))
-        val currentBox = b.getBox(cell.rowIndex, cell.columnIndex)
-        val re = b.getBoxes(cell.rowIndex).filter(cell => cell.columnIndex != cell.columnIndex && cell.color==Undefined && cell.value==currentBox.value)
-        val ce =   b.getBoxes.flatten.filter(cell => cell.rowIndex!= cell.rowIndex &&  cell.color==Undefined && cell.columnIndex == cell.columnIndex && cell.value==currentBox.value)
-        if((re++ce).nonEmpty) (re++ce).foreach{c =>
-          b = changeColorAndUpdateBoard(c, Black)
-        }
-        b
-      }
-
-    }
-  }*/
-
     def changeColorAndUpdateBoard(cell: Box, desiredColor: Color.Value): Board = {
       val line = boxes(cell.rowIndex)
       val box = line(cell.columnIndex)
@@ -85,9 +65,8 @@ object PuzzleSolver {
       } else {
         var b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(White))))
 
-        val re = b.getOtherRowCells(cell).filter(_.value==cell.value)
-        val ce =  b.getOtherColumnCells(cell).filter(_.value==cell.value)
-        if((re++ce).nonEmpty) (re++ce).foreach (c => b = changeColorAndUpdateBoard(c, Black))
+        val otherCells = b.getOtherRowCells(cell).filter(_.value==cell.value) ++ b.getOtherColumnCells(cell).filter(_.value==cell.value)
+        otherCells.foreach (c => b = changeColorAndUpdateBoard(c, Black))
 
         b
       }
