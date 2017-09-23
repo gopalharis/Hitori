@@ -47,7 +47,7 @@ object PuzzleSolver {
       * @return
       */
     def getOtherRowCells(cell: Box) = {
-      getBoxes(cell.rowIndex).filter(cell => cell.columnIndex != cell.columnIndex && cell.color==Undefined)
+      getBoxes(cell.rowIndex).filter(c => c.columnIndex != cell.columnIndex && c.color==Undefined)
     }
 
     def getBox(x: Int, y: Int): Box = boxes(x)(y)
@@ -82,7 +82,7 @@ object PuzzleSolver {
       } else {
         var b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(White))))
 
-        val re = b.getBoxes(cell.rowIndex).filter(c => c.columnIndex != cell.columnIndex && c.color==Undefined && c.value==cell.value)
+        val re = b.getOtherRowCells(cell).filter(_.value==cell.value)
         val ce =   b.getBoxes.flatten.filter(c => c.rowIndex != cell.rowIndex &&  c.color==Undefined && c.columnIndex == cell.columnIndex && c.value==cell.value)
         if((re++ce).nonEmpty) (re++ce).foreach (c => b = changeColorAndUpdateBoard(c, Black))
 
