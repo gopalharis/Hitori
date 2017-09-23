@@ -226,11 +226,11 @@ object PuzzleSolver {
       }
     }
 
-    if (boardData.isEmpty)
+    if (boardData.isEmpty) {
       Board(currBoard.getBoxes.reverse)
-    else {
+    } else {
       val line = loadLine(boardData.head).reverse
-      loadBoard(boardData.tail, x + 1,  Board(line :: currBoard.getBoxes))
+      loadBoard(boardData.tail, x + 1, Board(line :: currBoard.getBoxes))
     }
   }
 
@@ -240,8 +240,9 @@ object PuzzleSolver {
     board.getBoxes.flatten.filter(_.color==Undefined).foreach { currentCell =>
       val noRowDuplicate = !board.getBoxes.flatten.filter(rowCell => rowCell.rowIndex==currentCell.rowIndex && rowCell.columnIndex != currentCell.columnIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
       val noColumnDuplicate = !board.getBoxes.flatten.filter(rowCell => rowCell.columnIndex==currentCell.columnIndex && rowCell.rowIndex != currentCell.rowIndex && rowCell.color != Black).map(_.value).contains(currentCell.value)
-      if(noRowDuplicate && noColumnDuplicate) board = board.changeColorAndUpdateBoard(currentCell, White)
-      if(!noRowDuplicate && !noColumnDuplicate) board = board.changeColorAndUpdateBoard(currentCell, Black)
+      if(noRowDuplicate && noColumnDuplicate)
+        board.changeColorAndUpdateBoard(currentCell, White)
+
     }
     println("--------------")
     showBoard(board)
