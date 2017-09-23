@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e03aa853-2778-403e-b89a-5f9d8261e6b9" name="Default" comment="improvment">
+    <list default="true" id="e03aa853-2778-403e-b89a-5f9d8261e6b9" name="Default" comment="improvment with row">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="PuzzleSolver.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+            <state relative-caret-position="114">
+              <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -97,11 +97,6 @@
             <path>
               <item name="hitori" type="b2602c69:ProjectViewProjectNode" />
               <item name="hitori" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hitori" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hitori" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506168582151</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="improvment with row">
+      <created>1506169221164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1506169221164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -348,14 +350,15 @@
     <MESSAGE value="modified working version" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="improvment" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvment" />
+    <MESSAGE value="improvment with row" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvment with row" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala</url>
-          <line>281</line>
+          <line>284</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -363,7 +366,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala</url>
-          <line>67</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
@@ -475,44 +478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1506169167000" expanded="true" signature="31995:32012" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="31995:32030" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="31995:32043" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="31995:32058" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32093:34257" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32106:34242" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32160:32455" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32179:32440" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32242:32420" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32282:32386" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32303:32364" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32505:32832" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32524:32817" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32619:32797" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32659:32763" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32680:32741" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32883:33202" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32902:33187" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="32989:33167" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33029:33133" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33050:33111" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33245:33551" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33264:33536" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33338:33516" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33378:33482" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33399:33460" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33602:33911" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33621:33896" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33698:33876" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33738:33842" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33759:33820" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33963:34228" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="33982:34213" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="34015:34193" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="34055:34159" ph="..." />
-            <marker date="1506169167000" expanded="true" signature="34076:34137" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -542,8 +508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        <state relative-caret-position="114">
+          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
           <folding />
         </state>
       </provider>

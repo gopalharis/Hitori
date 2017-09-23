@@ -42,12 +42,15 @@ object PuzzleSolver {
     }
 
     /**
-      * Gets the
-      * @param cell
-      * @return
+      * @param updatedCell
+      * @return All undefined cells in the current row of a given cell
       */
-    def getOtherRowCells(cell: Box) = {
-      getBoxes(cell.rowIndex).filter(c => c.columnIndex != cell.columnIndex && c.color==Undefined)
+    def getOtherRowCells(updatedCell: Box) = {
+      getBoxes(updatedCell.rowIndex).filter(c => c.columnIndex != updatedCell.columnIndex && c.color==Undefined)
+    }
+
+    def getOtherColumnCells(upatedCell: Box) = {
+      getBoxes.flatten.filter(c => c.rowIndex != upatedCell.rowIndex && c.columnIndex == upatedCell.columnIndex  &&  c.color==Undefined)
     }
 
     def getBox(x: Int, y: Int): Box = boxes(x)(y)
@@ -83,7 +86,7 @@ object PuzzleSolver {
         var b = Board(boxes.updated(cell.rowIndex, line.updated(cell.columnIndex, box.changeValue(White))))
 
         val re = b.getOtherRowCells(cell).filter(_.value==cell.value)
-        val ce =   b.getBoxes.flatten.filter(c => c.rowIndex != cell.rowIndex &&  c.color==Undefined && c.columnIndex == cell.columnIndex && c.value==cell.value)
+        val ce =  b.getOtherColumnCells(cell).filter(_.value==cell.value)
         if((re++ce).nonEmpty) (re++ce).foreach (c => b = changeColorAndUpdateBoard(c, Black))
 
         b
