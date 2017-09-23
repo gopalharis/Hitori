@@ -87,7 +87,6 @@ object PuzzleSolver {
         if((re++ce).nonEmpty) (re++ce).foreach {
 
           cell => {
-            println(s"${cell.rowIndex} \t ${cell.columnIndex} \t ${cell.value} ")
             b = changeColorAndUpdateBoard(cell, Black)
           }
         }

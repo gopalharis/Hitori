@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e03aa853-2778-403e-b89a-5f9d8261e6b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$.class" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board.class" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver.class" afterPath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="e03aa853-2778-403e-b89a-5f9d8261e6b9" name="Default" comment="cleanup">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Box$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Box.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver$Color$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/hitori/com/aeq/PuzzleSolver.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala" afterPath="$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +28,8 @@
       <file leaf-file-name="PuzzleSolver.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="169">
+              <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -284,12 +291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506153677374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modified working version">
+      <created>1506167986485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506167986485</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="757" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -299,7 +312,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5518248" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5518248" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -324,14 +337,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First draft of working copy" />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft of working copy" />
+    <MESSAGE value="modified working version" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified working version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala</url>
-          <line>287</line>
+          <line>286</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -452,42 +466,42 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1506167961000" expanded="true" signature="31334:31351" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31334:31369" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31334:31382" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31334:31397" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31432:33596" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31445:33581" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31499:31794" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31518:31779" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31581:31759" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31621:31725" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31642:31703" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31844:32171" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31863:32156" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31958:32136" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="31998:32102" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32019:32080" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32222:32541" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32241:32526" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32328:32506" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32368:32472" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32389:32450" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32584:32890" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32603:32875" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32677:32855" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32717:32821" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32738:32799" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32941:33250" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="32960:33235" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33037:33215" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33077:33181" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33098:33159" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33302:33567" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33321:33552" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33354:33532" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33394:33498" ph="..." />
-            <marker date="1506167961000" expanded="true" signature="33415:33476" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32207:32224" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32207:32242" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32207:32255" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32207:32270" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32305:34469" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32318:34454" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32372:32667" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32391:32652" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32454:32632" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32494:32598" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32515:32576" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32717:33044" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32736:33029" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32831:33009" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32871:32975" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="32892:32953" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33095:33414" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33114:33399" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33201:33379" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33241:33345" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33262:33323" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33457:33763" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33476:33748" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33550:33728" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33590:33694" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33611:33672" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33814:34123" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33833:34108" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33910:34088" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33950:34054" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="33971:34032" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="34175:34440" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="34194:34425" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="34227:34405" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="34267:34371" ph="..." />
+            <marker date="1506168204000" expanded="true" signature="34288:34349" ph="..." />
           </folding>
         </state>
       </provider>
@@ -518,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aeq/PuzzleSolver.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="169">
+          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
           <folding />
         </state>
       </provider>
