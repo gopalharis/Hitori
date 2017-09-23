@@ -123,19 +123,6 @@ object PuzzleSolver {
     board
   }
 
-  def checkUniqueness(b:Board) :Board = {
-    var board = b
-
-    b.getBoxes.flatten.filter(_.color==White).foreach(b => {
-      val rows =  board.getBoxes(b.rowIndex).filter(c => c.columnIndex != b.columnIndex && c.value == b.value)
-      val columns = board.getBoxes.flatten.filter(c => c.columnIndex==b.columnIndex && c.rowIndex !=b.rowIndex && c.value==b.value)
-      (rows++columns).foreach { c =>
-        board = board.changeColorAndUpdateBoard(c, Color.Black)
-      }
-    })
-
-    board
-  }
 
   def checkCornerHeuristic(b:Board) : Board = {
     var board = b
