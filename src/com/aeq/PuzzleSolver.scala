@@ -53,36 +53,33 @@ object PuzzleSolver {
     def getBox(x: Int, y: Int): Box = boxes(x)(y)
 
 
-    /**
-      * Update color of the given cell (co-ordinates)
-      * When desiredColor white -> Mark other cells with same in the row & column to be `Black`
-      * When desiredColor black -> Mark all Adjacent cells as Black
-      * @param x
-      * @param y
-      * @param desiredColor
-      * @return
-      */
-    def changeColorAndUpdateBoard(x: Int, y: Int, desiredColor: Color.Value): Board = {
-
-      /**
-        * Update color of the cell
-        * @param targetColor
-        * @return
-        */
-      def changeColor(targetColor: Color.Value) = {
-        val line = boxes(x)
-        val box = line(y)
-        Board(boxes.updated(x, line.updated(y, box.changeValue(desiredColor))))
-      }
-
-      if(desiredColor==Black && !isBlackConnected(board = this, x, y)) {
-        markBlackAdjacentAsWhite(changeColor(Black), x, y)
+    def changeColorAndUpdateBoard(xNumber: Int, yNumber: Int, desiredColor: Color.Value): Board = {
+      val line = boxes(xNumber)
+      val box = line(yNumber)
+      if(desiredColor==Black && !isBlackConnected(board = this, xNumber, yNumber)) {
+        val b = Board(boxes.updated(xNumber, line.updated(yNumber, box.changeValue(desiredColor))))
+        markBlackAdjacentAsWhite(b, xNumber, yNumber)
       } else {
-        markSameValuesAsBlack(changeColor(White), x, y)
+        var b = Board(boxes.updated(xNumber, line.updated(yNumber, box.changeValue(White))))
+        val currentBox = b.getBox(xNumber, yNumber)
+        val re = b.getBoxes(xNumber).filter(cell => cell.columnIndex != yNumber && cell.color==Undefined && cell.value==currentBox.value)
+        val ce =   b.getBoxes.flatten.filter(cell => cell.rowIndex!= xNumber &&  cell.color==Undefined && cell.columnIndex == yNumber && cell.value==currentBox.value)
+        if((re++ce).nonEmpty) (re++ce).foreach {
+
+          cell => {
+            b = changeColorAndUpdateBoard(cell.rowIndex, cell.columnIndex, Black)
+          }
+        }
+
+        b
       }
 
     }
   }
+
+
+
+
 
   def isBlackConnected(board: Board,x: Int, y:Int): Boolean = {
     board.getNeighbors(x, y).map(_.color).contains(Black)
@@ -101,7 +98,6 @@ object PuzzleSolver {
     val re = b.getOtherRowCells(currentBox).filter(_.value==currentBox.value)
     val ce =   b.getBoxes.flatten.filter(cell => cell.rowIndex!= x &&  cell.color==Undefined && cell.columnIndex == y && cell.value==currentBox.value)
     if((re++ce).nonEmpty) (re++ce).foreach {
-
       cell => {
         b = b.changeColorAndUpdateBoard(cell.rowIndex, cell.columnIndex, Black)
       }
